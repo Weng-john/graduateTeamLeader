@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Identity by HTML5 UP</title>
+		<title>畢聯會簽到系統</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -20,17 +20,30 @@
 				<!-- Main -->
 					<section id="main">
 						<header>
-							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
-							<h1>Jane Doe</h1>
-							<p>Senior Psychonautics Engineer</p>
+							<span class="avatar"><img src="images/logo.jpeg" alt="" /></span>
+							<h1><strong>嘉義高中畢聯會</strong><br>組長驗證系統</h1>
 						</header>
-						<!--
-						<hr />
-						<h2>Extra Stuff!</h2>
-						<form method="post" action="#">
+                        <select id="identity">
+                            <option>請選擇你的身分</option>
+                            <option>會長 吳庭甄</option>
+                            <option>副會長 蕭展毅</option>
+                            <option>文書組長  翁華駿</option>
+                            <option>表演組長  吳韋德</option>
+                            <option>美術組長  洪群為</option>
+                            <option>音樂組長  李孟家</option>
+                            <option>影片組長  楊群耀</option>
+                            <option>編劇組長  蕭伃彤</option>
+                            <option>機動組長  范祐愷</option>
+                            <option>總務組長  林威丞</option>
+                        </select>
+                        <br>
+                        <div class="buttonArea" id="buttonArea">
+                            <button  class="confirm" onClick="Confirm()">確認</button>
+                        </div>
+                        <!--
+						<form method="post" name="check">
 							<div class="fields">
 								<div class="field">
-									<input type="text" name="name" id="name" placeholder="Name" />
 								</div>
 								<div class="field">
 									<input type="email" name="email" id="email" placeholder="Email" />
@@ -55,25 +68,17 @@
 									<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
 								</div>
 							</div>
-							<ul class="actions special">
-								<li><a href="#" class="button">Get Started</a></li>
-							</ul>
 						</form>
-						<hr />
-						-->
-						<footer>
-							<ul class="icons">
-								<li><a href="#" class="icon brands fa-twitter">Twitter</a></li>
-								<li><a href="#" class="icon brands fa-instagram">Instagram</a></li>
-								<li><a href="#" class="icon brands fa-facebook-f">Facebook</a></li>
-							</ul>
-						</footer>
+-->
 					</section>
 
+                <section class="video">
+                    <video id="preview" width=""></video>
+                </section>
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="copyright">
-							<li>&copy; Jane Doe</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>Modify:Weng-john</li><li>Design:HTML5 UP</li>
 						</ul>
 					</footer>
 
@@ -86,6 +91,10 @@
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
 			</script>
-
+            <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>`
+            <script type="text/javascript" src="instascan.min.js"></script>
+            <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+            <script src="assets/js/main.js"></script>
+            <script src="assets/js/scan.js"></script>
 	</body>
 </html>
