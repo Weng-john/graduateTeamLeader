@@ -8,10 +8,14 @@ let scanner = new Instascan.Scanner({
 });
 scanner.addListener('scan', function (content) {
     console.log(content);
+    if(content!=""){
+        content= content.split(",");
+        console.log(content);
+    }
 });
 Instascan.Camera.getCameras().then(function (cameras) {
     if (cameras.length > 0) {
-        scanner.start(cameras[0]); // [0] 前鏡頭 [1] 後鏡頭 
+        scanner.start(cameras[1]); // [0] 前鏡頭 [1] 後鏡頭 
     }
     else {
         console.error('沒有找到相機');
