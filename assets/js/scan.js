@@ -15,7 +15,7 @@ scanner.addListener('scan', function (content) {
 });
 Instascan.Camera.getCameras().then(function (cameras) {
     if (cameras.length > 0) {
-        scanner.start(cameras[1]); // [0] 前鏡頭 [1] 後鏡頭 
+        scanner.start(cameras[0]); // [0] 前鏡頭 [1] 後鏡頭 
     }
     else {
         console.error('沒有找到相機');

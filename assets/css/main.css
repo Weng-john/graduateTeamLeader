@@ -1092,7 +1092,7 @@
 		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
 		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
 		transition: opacity 1s ease, transform 1s ease;
-		padding: 4.5em 3em 3em 3em ;
+		padding: 2em 1em 2em 1em ;
 		background: #ffffff;
 		border-radius: 4px;
 		cursor: default;
@@ -1103,3 +1103,7 @@
 		width: 27em;
         margin: 5em 0 0 0;
     }
+
+.image{
+		width: 25em;
+}
