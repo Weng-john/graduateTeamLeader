@@ -1,6 +1,6 @@
 var recorder= "";
 var index= 0;
-var Url=["https://script.google.com/macros/s/AKfycby60rn8gkTgh4JTfSYk_lSBgJbZJedp0A8CNVKGsXf1uM3aiMeC7bUMU1ntkV0sw3vo/exec", "https://script.google.com/macros/s/AKfycby5VIVmsG6cvPGIeM4cwGsfd9AqbVBB4ZnZkNQTtf7XbRu50tzgx-yH99V0xOIC-Fj0iw/exec"];
+var Url=["https://script.google.com/macros/s/AKfycbyMexMAWsW0V5zjbc2OnM4PYbyYS74yDchfiWgT/exec", "https://script.google.com/macros/s/AKfycbwDSgpyUX-X3Pyu7_9Hg92HGjXjQXz8bKvmmxv8HQ/exec"];
 
 function Confirm(){
     var person= document.getElementById("identity").value;
