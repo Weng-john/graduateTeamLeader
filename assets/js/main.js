@@ -22,6 +22,7 @@ function send(data){
             },
             datatype:'json',
             success: function(respond){
+                press= true;
                 if(respond=="success"){
                     alert("簽到成功");
                 }

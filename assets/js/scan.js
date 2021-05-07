@@ -2,15 +2,13 @@ var logindata= "";
 
 let scanner = new Instascan.Scanner({
     continuous: true, // 連續掃描
-    video: document.getElementById('preview'), // 預覽
-    facingMode: {
-        exact: "environment"
-    }
+    video: document.getElementById('preview') // 預覽
 });
 
 scanner.addListener('scan', function (content) {
     alert("運作正常，掃描中");
     if(content!="" && press){
+        press= false;
         content= content.split(",");
         content[1]= unescape(content[1].replace(/\\u/g, '%u'));
         content[2]= unescape(content[2].replace(/\\u/g, '%u'));
@@ -23,6 +21,7 @@ scanner.addListener('scan', function (content) {
         }
         else{
             alert("請報到者重填資料");
+            press= true;
         }
     }
 });
