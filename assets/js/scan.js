@@ -10,7 +10,7 @@ let scanner = new Instascan.Scanner({
 
 scanner.addListener('scan', function (content) {
     alert("運作正常，掃描中");
-    if(content!=""){
+    if(content!="" && press){
         content= content.split(",");
         content[1]= unescape(content[1].replace(/\\u/g, '%u'));
         content[2]= unescape(content[2].replace(/\\u/g, '%u'));
@@ -31,7 +31,7 @@ Instascan.Camera.getCameras().then(function (cameras) {
     if (cameras.length > 0) {
         alert("有找到鏡頭，共有" + cameras.length + "個");
         scanner.start(cameras[1]); // [0] 前鏡頭 [1] 後鏡頭 
-        scanner.mirror= true;
+        scanner.mirror= false;
     }
     else {
         alert('沒有找到相機');

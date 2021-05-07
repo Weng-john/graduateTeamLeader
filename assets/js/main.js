@@ -1,5 +1,6 @@
 var recorder= "";
 var index= 0;
+var press= false;
 var Url=["https://script.google.com/macros/s/AKfycbyMexMAWsW0V5zjbc2OnM4PYbyYS74yDchfiWgT/exec", "https://script.google.com/macros/s/AKfycbwDSgpyUX-X3Pyu7_9Hg92HGjXjQXz8bKvmmxv8HQ/exec"];
 
 function Confirm(){
@@ -7,6 +8,7 @@ function Confirm(){
     person= person.split(" ");
     recorder= person[1];
     document.getElementById("video").style.display= "block";
+    press= true;
 }
 
 function send(data){
