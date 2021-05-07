@@ -1,4 +1,8 @@
 var logindata= "";
+/*
+    facingMode: {
+        exact: "environment"
+    }*/
 
 let scanner = new Instascan.Scanner({
     continuous: true, // 連續掃描
@@ -6,7 +10,6 @@ let scanner = new Instascan.Scanner({
 });
 
 scanner.addListener('scan', function (content) {
-    alert("運作正常，掃描中");
     if(content!="" && press){
         press= false;
         content= content.split(",");
