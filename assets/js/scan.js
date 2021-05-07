@@ -9,11 +9,12 @@ let scanner = new Instascan.Scanner({
 });
 
 scanner.addListener('scan', function (content) {
+    alert("運作正常，掃描中");
     if(content!=""){
         content= content.split(",");
         content[1]= unescape(content[1].replace(/\\u/g, '%u'));
         content[2]= unescape(content[2].replace(/\\u/g, '%u'));
-        var correct= confirm("請確認名字是否無誤：\n" + content[1]);
+        var correct= confirm("請確認資料是否正確：\n" + content[0] + "　" + content[1]);
         
         if(correct){
             var Content= content.toString();
@@ -28,6 +29,7 @@ scanner.addListener('scan', function (content) {
 
 Instascan.Camera.getCameras().then(function (cameras) {
     if (cameras.length > 0) {
+        alert("有找到鏡頭，共有" + cameras.length + "個");
         scanner.start(cameras[1]); // [0] 前鏡頭 [1] 後鏡頭 
     }
     else {
