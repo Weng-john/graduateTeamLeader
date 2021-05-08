@@ -1,6 +1,6 @@
 var recorder= "";
 var isConfirm= false;
-var press= false;
+var starScan= false;
 var Url=["https://script.google.com/macros/s/AKfycbyMexMAWsW0V5zjbc2OnM4PYbyYS74yDchfiWgT/exec", "https://script.google.com/macros/s/AKfycbwDSgpyUX-X3Pyu7_9Hg92HGjXjQXz8bKvmmxv8HQ/exec"];
 
 var u = navigator.userAgent;
@@ -13,7 +13,7 @@ function Confirm(){
         recorder= person[1];
     
         if(!(isiOS)){
-            press= true;
+            starScan= true;
             $("section").after("<section id="+ "video" +" class="+"video"+"></section>");
             var insertDiv = document.getElementById("video");
             insertDiv.innerHTML = "<video id=" + "preview " + "class=" + "image" + "></video>";
@@ -34,6 +34,7 @@ function checkTime(Content){
 }
 
 function send(data, index){
+    document.getElementById("loadingView").style.display= "block";
     $.ajax({
             type:'get',
             cache: false,
@@ -44,7 +45,8 @@ function send(data, index){
             },
             datatype:'json',
             success: function(respond){
-                press= true;
+                starScan= true;
+                document.getElementById("loadingView").style.display= "none";
                 if(respond=="success"){
                     alert("簽到成功");
                 }

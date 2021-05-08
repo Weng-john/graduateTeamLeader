@@ -7,8 +7,8 @@ function notiOS(){
     });
 
     scanner.addListener('scan', function (content) {
-        if(content!="" && press){
-            press= false;
+        if(content!="" && starScan){
+            starScan= false;
             content= content.split(",");
             content[1]= unescape(content[1].replace(/\\u/g, '%u'));
             content[2]= unescape(content[2].replace(/\\u/g, '%u'));
@@ -21,7 +21,7 @@ function notiOS(){
             }
             else{
                 alert("請報到者重填資料");
-                press= true;
+                starScan= true;
             }
         }
     });
