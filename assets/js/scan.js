@@ -38,11 +38,11 @@ function notiOS(){
             alert(e);
     });
 }
-
-function iOS(){
     var html5QrcodeScanner = new Html5QrcodeScanner(
 	"reader", { fps: 10, qrbox: 250 });
     html5QrcodeScanner.render(onScanSuccess);
+
+function iOS(){
 }
 
 function onScanSuccess(content) {
