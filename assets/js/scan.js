@@ -54,7 +54,7 @@ function onScanSuccess(content) {
     if(correct){
         var Content= content.toString();
         Content += "," + recorder;
-        checkTime(Co    ntent);
+        checkTime(Content);
     }
     else{
         alert("請報到者重填資料");
