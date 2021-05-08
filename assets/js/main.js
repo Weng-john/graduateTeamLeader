@@ -13,6 +13,7 @@ function Confirm(){
         recorder= person[1];
     
         if(!(isiOS)){
+            alert("你的作業系統為android");
             starScan= true;
             $("section").after("<section id="+ "video" +" class="+"video"+"></section>");
             var insertDiv = document.getElementById("video");
@@ -20,6 +21,7 @@ function Confirm(){
             notiOS();
         }
         else{
+            alert("你的作業系統為IOS");
             iOS();
         }
     }
