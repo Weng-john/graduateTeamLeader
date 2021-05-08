@@ -19,6 +19,9 @@ function Confirm(){
             insertDiv.innerHTML = "<video id=" + "preview " + "class=" + "image" + "></video>";
             notiOS();
         }
+        else{
+            iOS();
+        }
     }
 }
 
