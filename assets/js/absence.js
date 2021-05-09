@@ -17,10 +17,7 @@ function absence(){
     var person= document.getElementById("identity").value;
     if(person!="請選擇你的身分"){
         if(isConfirm){
-            var removeElement= document.getElementById("video");
-            var obj= removeElement.parentNode;
-            obj.removeChild(removeElement);
-            isConfirm= false;
+            document.getElementById("video").style.display= "none";
         }
         if(!(clickAbsence)){
             clickAbsence= true;

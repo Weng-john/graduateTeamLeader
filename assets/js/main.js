@@ -22,22 +22,27 @@ function Confirm(){
             clickAbsence= false;
         }
         if(!(isConfirm)){
-            isConfirm= true;
-            person= person.split(" ");
-            recorder= person[1];
+            if(document.getElementById("video")=="null"){
+                isConfirm= true;
+                person= person.split(" ");
+                recorder= person[1];
     
-            if(!(isiOS)){
-                starScan= true;
-                $("#main").after("<section id="+ "video" +" class="+"video"+"></section>");
-                var insertDiv = document.getElementById("video");
-                insertDiv.innerHTML = "<video id=" + "preview " + "class=" + "image" + "></video>";
-                notiOS();
+                if(!(isiOS)){
+                    starScan= true;
+                    $("#main").after("<section id="+ "video" +" class="+"video"+"></section>");
+                    var insertDiv = document.getElementById("video");
+                    insertDiv.innerHTML = "<video id=" + "preview " + "class=" + "image" + "></video>";
+                    notiOS();
+                }
+                else{
+                    $("#main").after("<section id="+ "video" +" class="+"video"+"></section>");
+                    var insertDiv = document.getElementById("video");
+                    insertDiv.innerHTML = "<div style=" + "width: 25em " + " id=" + "reader" + "></div>";
+                    iOS();
+                }
             }
             else{
-                $("#main").after("<section id="+ "video" +" class="+"video"+"></section>");
-                var insertDiv = document.getElementById("video");
-                insertDiv.innerHTML = "<div style=" + "width: 25em " + " id=" + "reader" + "></div>";
-                iOS();
+                document.getElementById("video").style.display="block";
             }
         }
         else{
