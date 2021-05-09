@@ -22,7 +22,7 @@ function Confirm(){
             clickAbsence= false;
         }
         if(!(isConfirm)){
-            if(document.getElementById("video")=="null"){
+            if(document.getElementById("video") === null){
                 isConfirm= true;
                 person= person.split(" ");
                 recorder= person[1];
