@@ -18,6 +18,7 @@ function absence(){
     if(person!="請選擇你的身分"){
         if(isConfirm){
             document.getElementById("video").style.display= "none";
+            isConfirm= false;
         }
         if(!(clickAbsence)){
             clickAbsence= true;

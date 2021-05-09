@@ -16,10 +16,13 @@ function Confirm(){
     var person= document.getElementById("identity").value;
     if(person!="請選擇你的身分"){
         if(clickAbsence){
-            var removeElement= document.getElementById("absenceField");
-            var obj= removeElement.parentNode;
-            obj.removeChild(removeElement);
+            var removeSection= document.getElementsByClassName("absenceField");
+            var i=0;
+            while(removeSection.length){
+                removeSection[i].parentNode.removeChild(removeSection[i]);
+            }
             clickAbsence= false;
+            turnOnAbsenceComfirm= true;
         }
         if(!(isConfirm)){
             if(document.getElementById("video") === null){
