@@ -35,10 +35,10 @@
 							<span class="avatar"><img src="images/logo.jpeg" alt="" /></span>
 							<h1><strong>嘉義高中畢聯會</strong><br>組長驗證系統</h1>
 						</header>
-                        <select id="identity">
+                        <select id="identity" onchange="turnOn()">
                             <option>請選擇你的身分</option>
-                            <option>會長　　  吳庭甄</option>
-                            <option>副會長　  蕭展毅</option>
+                            <option>會長  吳庭甄</option>
+                            <option>副會長  蕭展毅</option>
                             <option>文書組長  翁華駿</option>
                             <option>表演組長  吳韋德</option>
                             <option>美術組長  洪群為</option>
@@ -50,7 +50,8 @@
                         </select>
                         <br>
                         <div class="buttonArea" id="buttonArea">
-                            <button  class="confirm" onClick="Confirm()">確認</button>
+                            <button class="absence" onClick="absence()">請假回報</button>
+                            <button  class="confirm" onClick="Confirm()">掃描QRcode</button>
                         </div>
                         <!--
 						<form method="post" name="check">
@@ -83,7 +84,6 @@
 						</form>
 -->
 					</section>
-                
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="copyright">
@@ -107,5 +107,6 @@
             <script src="assets/js/htmlQRcode.js"></script>
             <script src="assets/js/main.js"></script>
             <script src="assets/js/scan.js"></script>
+            <script src="assets/js/absence.js"></script>
 	</body>
 </html>
